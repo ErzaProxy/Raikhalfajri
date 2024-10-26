@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEA Salon</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body> 
+    <nav class = navbar> <!-- Creating a navigation bar -->
+    <div class =  logo>SEA Salon</div>
+    <ul class="nav-links">
+      <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+        <div class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a> <ul class="dropdown">
+            <li><a href="reserve.html">Reservation</a></li>
+          </ul></li>
+          <li><a href="contactDetail.html">Contact Detail</a>
+            <li><a Onclick="window.location.href='#reviews'">Review</a></li>
+          <li><a href="register.html">Login</a></li>
+    </div>
+  </ul>
+    </nav>
+    <div class="mainMenu">
+      <div class="swrapper">
+        <h1 class="welcome">Welcome to SEA Salon</h1>
+        <h5 class="subwelcome">~Beauty and Elegance Redefined~</h5>
+        <div class="start">
+        <a  href="services.html" class="start">『Start Services』</a>
+      </div>
+          <div class="slider">
+            <img id="slide1" src="BackgroundIMG/360_F_606876358_NU2hCq3RP7xDpXG6PWnAMGGAun0fB5tW (1).jpg">
+            <img id="slide2" src="BackgroundIMG/Salon.png">
+            <img id="slide3" src="BackgroundIMG/a29c90c4-0dfd-4605-9030-4358020610a0_169.jpeg">
+            <img id="slide4" src="BackgroundIMG/mens-facial-treatment.jpg">
+          </div>
+          <div class="sliderNav">
+            <a href="#slide1"></a>
+            <a href="#slide2"></a>
+            <a href="#slide3"></a>
+            <a href="#slide4"></a>
+          </div>
+      </div>
+  </div>
+  <div class="reviews" id="reviews">
+    <div class="revwrapper">
+      <div class="post">
+      <div class="thanks">Thanks for Your Rating</div>
+      <div class="edit">Edit Text</div>
+    </div>
+    <div class="starwidget">
+      <form action="connect.php" class="ratings" method="post">
+      <input type="radio" name="rate" id="rate5"  value="5"/>
+      <label for="rate5" class="fa fa-star"></label >
+      <input type="radio" name="rate" id="rate4"  value="4"/>
+      <label for="rate4" class="fa fa-star"></label>
+      <input type="radio" name="rate" id="rate3"  value="3"/>
+      <label for="rate3" class="fa fa-star"></label>
+      <input type="radio" name="rate" id="rate2" value="2"/>
+      <label for="rate2" class="fa fa-star"></label>
+      <input type="radio" name="rate" id="rate1" value="1"/>
+      <label for="rate1" class="fa fa-star"></label>
+        <header></header>
+        <div class="hiddenArea">
+        <div class="textarea">
+          <textarea class="nama" cols="30" placeholder="Your Name...." name="namaRate" id="namaRate"></textarea>
+          <textarea cols="30" placeholder="Describe your experience..." name="deskripsiRate" id="deskripsiRate"></textarea>
+        </div>
+        <div class="ratebutton" value="Submit">
+          <button type="submit">Post</button>
+        </div>
+        </div>
+      </form>
+    </div>
+    </div>
+    <script>
+      const rateButton= document.querySelector("button");
+      const post= document.querySelector(".post");
+      const starWidget= document.querySelector(".starwidget");
+      const reditbutton= document.querySelector(".edit");
+      rateButton.onclick = ()=>{
+        starWidget.style.display = "none";
+        post.style.display = "block";
+        reditbutton.onclick = ()=>{
+        starWidget.style.display = "block";
+        post.style.display = "none";
+        return false;
+      }
+      }
+    </script>
+  </div>
+  </body>
+</html>
